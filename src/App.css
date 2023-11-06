@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pallete{
+    color: #F7F7F7;
+    color: #93deff;
+    color: #606470;
+    color: #242938;
+}
+
+
+nav ul li{
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px; 
+    color: #E3E1E1;
+  }
+  
+  nav ul li:hover{
+    border-bottom: 4px solid #93DEFF;
+    box-shadow: 0px 2px 50px 5px #34b7ff;
+  }
+
+  .fc{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+  }
+
+  .hero-wraper{
+    height: calc(100vh - 60px);
+  }
+
+  .hero{
+    z-index: 0;
+    background-image: url("./assets/hero.jpg");
+    background-repeat: no-repeat;
+    height: calc(100vh - 60px);
+    animation: hero 1.75s;
+    animation-timing-function: linear
+  }
+  @keyframes hero {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  .qq{
+    z-index: 10;
+    background-image: url("./assets/q.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 4px solid #93DEFF;
+    border-radius: 90px;
+    box-shadow: 0px 10px 10px -5px #34b7ff;
+    animation: qq 3s;
+    animation-timing-function: linear
+  }
+  @keyframes qq {
+    0% { opacity: 0 }
+    67% { opacity: 0 }
+    100% { opacity: 1 }
+  }
+  
+  .typed-out{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s;
+    animation-timing-function: linear
+  }
+  @keyframes typing {
+    0% { width: 0 }
+    50% { width: 0 }
+    100% { width: 100% }
+  }
+
+  .typed-out2{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing2 6s;
+    animation-timing-function: linear
+  }
+  @keyframes typing2 {
+    0% { width: 0; visibility: hidden; }
+    66% { width: 0%; visibility: hidden; }
+    100% { width: 100%; visibility: visible; }
+  }
+
+  .hero-fade{
+    animation: fade 8s;
+    animation-timing-function: linear
+  }
+  @keyframes fade {
+    0% { opacity: 0 }
+    75% { opacity: 0 }
+    100% { opacity: 1 }
+  }
+
+  .neonText {
+    color: #93DEFF;
+    text-shadow:
+      0 0 5px #93DEFF,
+      0 0 8px #93DEFF,
+      0 0 12px #93DEFF,
+      0 0 32px #363636;
+  }
+
+  .edu-cart {
+    position: relative;
+    color: #F7F7F7;
+    border: none;
+    z-index: 2;
+  }
+  .edu-cart:before,
+  .edu-cart:after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    border: 4px solid;
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+  .edu-cart:before{
+     top: 0;
+     left: 0;
+     border-bottom-color: transparent;
+     border-right-color: transparent;
+     border-top-color: #93DEFF;
+     border-left-color: #93DEFF;
+  }
+  .edu-cart:after{
+     bottom: 0;
+     right: 0;
+     border-top-color: transparent;
+     border-left-color: transparent;
+     border-bottom-color: #93DEFF;
+     border-right-color: #93DEFF;
+  }
+  .edu-cart:hover:before,
+  .edu-cart:hover:after {
+    border-color: #93DEFF;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 5px #93DEFF, 0 0 5px #93DEFF inset;
+  }
+  
+  .xp{
+    box-shadow: 0px 2px 10px 5px #34b7ff;
+  }
+
+  .xp-details{
+    border-bottom: 4px solid #93DEFF;
+  }
+
+  .tech{
+    background: radial-gradient(circle at 100px 100px, #606470, #93DEFF);
+    box-shadow: 0px 2px 5px 5px #34b7ff;
+  }
+
+  .contact{
+    background-image: url("./assets/contact.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  
+  @media only screen and (min-width: 1024px){
+
+    .xp-details{
+      border-right: 4px solid #93DEFF;
+      border-bottom: 0;
+    }
+
+    .xp:hover{
+      box-shadow: 0px 2px 25px 5px #34b7ff;
+      scale: 1.05;
+    }
+  
+    .xp:hover .xp-info{
+      background: linear-gradient(to left, #606470 50%, #93DEFF 50%) right;
+      background-size: 200%;
+      transition: .5s ease-out;
+      color: #F7F7F7;
+    }
+  
+    .xp:hover .xp-details{
+      background: #93DEFF 50%;
+      color: #242938;
+    }
+  
+    .xp:hover .xp-info h2{
+      color: #93DEFF;
+    }
+  
+    .xp:hover .xp-details span{
+      color: #242938;
+    }
+
+    .techs:hover .tech-div:not(:hover){
+      opacity: .3;
+    }
+
+    .tech:hover{
+      scale: 1.2;
+    }
+
+    .ptitle:hover{
+      color: #93DEFF;
+      text-shadow:
+      0 0 5px #93DEFF,
+      0 0 8px #93DEFF,
+      0 0 12px #93DEFF,
+      0 0 32px #363636;
+    }
+  }
+
+
+  @media only screen and (min-width: 1600px){
+    .hero{
+      background-size: cover;
+      min-height: 90vh;
+    }
+  }
